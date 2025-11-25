@@ -126,12 +126,12 @@ export default function App() {
   const [pitch, setPitch] = useState("0");
   const [rate, setRate] = useState("1.0");
   const [volume, setVolume] = useState("1.0");
-  const [autoPlay, setAutoPlay] = useState(true);
+ const [autoPlay] = useState(true);
   const [duration, setDuration] = useState(0);
 
   const [languageFilter, setLanguageFilter] = useState("");
   const [genderFilter, setGenderFilter] = useState("");
-  const [showMore, setShowMore] = useState(false);
+  const [showMore] = useState(false);
 
   const [sampleAudioSrc, setSampleAudioSrc] = useState(null);
   const [sampleLoadingId, setSampleLoadingId] = useState(null);

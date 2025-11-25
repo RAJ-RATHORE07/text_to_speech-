@@ -1,0 +1,8 @@
+Flask==2.2.5
+Flask-Cors==3.0.10
+edge-tts==0.0.17
+deep-translator==1.8.1
+langdetect==1.0.9
+PyJWT==2.8.0
+werkzeug==2.2.3
+gunicorn==20.1.0

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "9df4d774245542229a66f3501d535138",
+    "email": "rajeshwarirathore07@gmail.com",
+    "name": "raj",
+    "password_hash": "scrypt:32768:8:1$7YD9rP3SUFYXr67M$78736d2b9cf1b4086ea38ceca343ebf0970305d76a90c6f5f8d7ddaf3ef6dbef79812d4ebf386afbb728a4f8edbf4396915d856e84a47e4c0db8777a1646b0d4",
+    "createdAt": 1763171126
+  }
+]

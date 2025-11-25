@@ -1,0 +1,204 @@
+2025-11-14 13:37:53,940 WARNING  * Debugger is active!
+2025-11-14 13:37:53,940 INFO  * Debugger PIN: 576-776-885
+2025-11-14 13:38:02,224 INFO 127.0.0.1 - - [14/Nov/2025 13:38:02] "OPTIONS /api/speak HTTP/1.1" 200 -
+2025-11-14 13:38:02,461 INFO Starting synthesis: voice=hi-IN-SwaraNeural pitch=0 rate=1.0 volume=1.0 tone=happy
+2025-11-14 13:38:02,461 DEBUG Using proactor: IocpProactor
+2025-11-14 13:38:02,461 ERROR TTS generation failed
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 177, in speak
+    asyncio.run(synthesize_to_file(ssml_text, voice, out_path))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 90, in synthesize_to_file
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:38:02,482 INFO 127.0.0.1 - - [14/Nov/2025 13:38:02] "[35m[1mPOST /api/speak HTTP/1.1[0m" 500 -
+2025-11-14 13:39:31,926 INFO  * Detected change in 'C:\\Users\\DELL\\OneDrive\\Desktop\\tts\\backend\\app.py', reloading
+2025-11-14 13:39:32,953 WARNING  * Debugger is active!
+2025-11-14 13:39:32,963 INFO  * Debugger PIN: 576-776-885
+2025-11-14 13:39:40,708 INFO 127.0.0.1 - - [14/Nov/2025 13:39:40] "OPTIONS /api/speak HTTP/1.1" 200 -
+2025-11-14 13:39:40,947 INFO synthesis attempt 1 voice=hi-IN-SwaraNeural
+2025-11-14 13:39:40,947 DEBUG Using proactor: IocpProactor
+2025-11-14 13:39:40,950 ERROR Non-network exception during synthesis
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:39:40,950 ERROR TTS generation failed
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 141, in speak
+    synthesize_with_retries(ssml_text, voice, out_path, retries=3, backoff=1.0)
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 82, in synthesize_with_retries
+    raise exc
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:39:40,953 INFO 127.0.0.1 - - [14/Nov/2025 13:39:40] "[35m[1mPOST /api/speak HTTP/1.1[0m" 500 -
+2025-11-14 13:40:14,559 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.6:5000
+2025-11-14 13:40:14,559 INFO [33mPress CTRL+C to quit[0m
+2025-11-14 13:40:14,560 INFO  * Restarting with stat
+2025-11-14 13:40:15,246 WARNING  * Debugger is active!
+2025-11-14 13:40:15,249 INFO  * Debugger PIN: 576-776-885
+2025-11-14 13:40:19,426 INFO 127.0.0.1 - - [14/Nov/2025 13:40:19] "OPTIONS /api/speak HTTP/1.1" 200 -
+2025-11-14 13:40:19,657 INFO synthesis attempt 1 voice=hi-IN-SwaraNeural
+2025-11-14 13:40:19,657 DEBUG Using proactor: IocpProactor
+2025-11-14 13:40:19,657 ERROR Non-network exception during synthesis
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:40:19,663 ERROR TTS generation failed
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 141, in speak
+    synthesize_with_retries(ssml_text, voice, out_path, retries=3, backoff=1.0)
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 82, in synthesize_with_retries
+    raise exc
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:40:19,663 INFO 127.0.0.1 - - [14/Nov/2025 13:40:19] "[35m[1mPOST /api/speak HTTP/1.1[0m" 500 -
+2025-11-14 13:40:25,083 INFO 127.0.0.1 - - [14/Nov/2025 13:40:25] "OPTIONS /api/speak HTTP/1.1" 200 -
+2025-11-14 13:40:25,093 INFO synthesis attempt 1 voice=hi-IN-NeerjaNeural
+2025-11-14 13:40:25,093 DEBUG Using proactor: IocpProactor
+2025-11-14 13:40:25,097 ERROR Non-network exception during synthesis
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:40:25,097 ERROR TTS generation failed
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 141, in speak
+    synthesize_with_retries(ssml_text, voice, out_path, retries=3, backoff=1.0)
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 82, in synthesize_with_retries
+    raise exc
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:40:25,097 INFO 127.0.0.1 - - [14/Nov/2025 13:40:25] "[35m[1mPOST /api/speak HTTP/1.1[0m" 500 -
+2025-11-14 13:41:00,709 INFO 127.0.0.1 - - [14/Nov/2025 13:41:00] "OPTIONS /api/speak HTTP/1.1" 200 -
+2025-11-14 13:41:00,728 INFO synthesis attempt 1 voice=hi-IN-NeerjaNeural
+2025-11-14 13:41:00,728 DEBUG Using proactor: IocpProactor
+2025-11-14 13:41:00,731 ERROR Non-network exception during synthesis
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:41:00,731 ERROR TTS generation failed
+Traceback (most recent call last):
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 141, in speak
+    synthesize_with_retries(ssml_text, voice, out_path, retries=3, backoff=1.0)
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 82, in synthesize_with_retries
+    raise exc
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 69, in synthesize_with_retries
+    asyncio.run(_edge_tts_save_with_timeout(ssml_text, voice, out_path, timeout=30))
+  File "C:\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\OneDrive\Desktop\tts\backend\app.py", line 56, in _edge_tts_save_with_timeout
+    comm = edge_tts.Communicate(ssml_text, voice, input_type="ssml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Communicate.__init__() got an unexpected keyword argument 'input_type'
+2025-11-14 13:41:00,731 INFO 127.0.0.1 - - [14/Nov/2025 13:41:00] "[35m[1mPOST /api/speak HTTP/1.1[0m" 500 -
+2025-11-14 13:46:21,910 INFO  * Detected change in 'C:\\Users\\DELL\\OneDrive\\Desktop\\tts\\backend\\app.py', reloading
+2025-11-14 13:46:22,107 INFO  * Restarting with stat

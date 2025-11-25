@@ -2,17 +2,22 @@
 
 A full-stack Text-to-Speech (TTS) project that converts written text into natural-sounding speech.
 This repository includes both backend logic and a frontend user interface for an easy and interactive experience.
+Frontend (Netlify)
+
+https://resonant-youtiao-1d9e96.netlify.app
+👉 Live React App
+
+🛠 Backend (Render)
+
+https://text-to-speech-o9p1.onrender.com
+👉 Flask API Server
 
 🚀 Features
 
 Convert text to speech in seconds
-
 Play or download generated audio
-
 User-friendly interface
-
 Modular architecture (frontend + backend)
-
 Supports Python-based TTS engines
 
 🧠 Tech Stack

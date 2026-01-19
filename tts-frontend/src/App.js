@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-axios.defaults.baseURL = process.env.REACT_APP_API_BASE || "http://localhost:5000";
+axios.defaults.baseURL = "https://tts-backend.onrender.com" || "http://localhost:5000";
 
 // helper to set axios default header if token exists (single definition)
 function setAuthToken(token) {

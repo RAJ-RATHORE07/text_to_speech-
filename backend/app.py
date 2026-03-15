@@ -379,8 +379,8 @@ def get_history():
     user = require_auth()
     items = []
     for p in SAVED_DIR.glob("*.json"):
-         if p.name == "users.json":
-        continue
+        if p.name == "users.json":
+            continue
         try:
             j = json.loads(p.read_text())
             items.append(j)

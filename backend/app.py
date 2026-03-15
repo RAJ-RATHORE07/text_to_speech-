@@ -260,7 +260,12 @@ def speak():
         try:
             ssml = build_ssml(translated_text, cand_voice, pitch, rate, volume, tone, use_express=use_expr)
             logger.info(f"Attempt {idx+1}: voice={cand_voice} express={use_expr} ({reason})")
-            asyncio.run(synthesize_ssml_to_file(ssml, cand_voice, out_path))
+
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            loop.run_until_complete(synthesize_ssml_to_file(ssml, cand_voice, out_path))
+            loop.close()
+
             if os.path.exists(out_path) and os.path.getsize(out_path) > 0:
                 attempts.append({"voice": cand_voice, "use_express": use_expr, "ok": True})
                 success = True
@@ -296,7 +301,10 @@ def validate_voice():
     tmp = OUT_DIR / f"{uuid.uuid4().hex}_val.mp3"
     try:
         ssml = build_ssml("This is a quick voice validation sample.", v, "0", "1.0", "1.0", "none")
-        asyncio.run(synthesize_ssml_to_file(ssml, v, str(tmp)))
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(synthesize_ssml_to_file(ssml, v, str(tmp)))
+        loop.close()
         ok = os.path.exists(str(tmp)) and os.path.getsize(str(tmp)) > 0
         return jsonify({"ok": ok})
     except Exception as e:
@@ -364,6 +372,8 @@ def get_history():
     user = require_auth()
     items = []
     for p in SAVED_DIR.glob("*.json"):
+         if p.name == "users.json":
+        continue
         try:
             j = json.loads(p.read_text())
             items.append(j)

@@ -5,5 +5,12 @@
     "name": "raj",
     "password_hash": "scrypt:32768:8:1$7YD9rP3SUFYXr67M$78736d2b9cf1b4086ea38ceca343ebf0970305d76a90c6f5f8d7ddaf3ef6dbef79812d4ebf386afbb728a4f8edbf4396915d856e84a47e4c0db8777a1646b0d4",
     "createdAt": 1763171126
+  },
+  {
+    "id": "9554688850604914b01f76349e5c9f97",
+    "email": "admin@gmail.com",
+    "name": "raj rathore ",
+    "password_hash": "scrypt:32768:8:1$jj11IO8rZbiDgiGx$9b85da7d93601cf4495394ba5dd8932a8793588b823ec26c7cfe8c6edee1daca093fd49c8964526e1f16c2e526ca88cc9156175623be3eb217185b29daf4fcad",
+    "createdAt": 1773541627
   }
 ]

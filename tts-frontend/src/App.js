@@ -6,7 +6,7 @@ import "./App.css";
 axios.defaults.baseURL =
 window.location.hostname === "localhost"
   ? "http://localhost:5000"
-  : "https://tts-backend.onrender.com";
+  : "https://text-to-speech-vigs.onrender.com";
 
 // helper to set axios default header if token exists (single definition)
 function setAuthToken(token) {

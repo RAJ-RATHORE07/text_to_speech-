@@ -2,7 +2,7 @@
 
 A full-stack Text-to-Speech (TTS) project that converts written text into natural-sounding speech.
 This repository includes both backend logic and a frontend user interface for an easy and interactive experience.
-
+Live demo :"https://resonant-youtiao-1d9e96.netlify.app/"
 
 🚀 Features
 

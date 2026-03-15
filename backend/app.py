@@ -273,11 +273,18 @@ def speak():
             else:
                 attempts.append({"voice": cand_voice, "use_express": use_expr, "ok": False, "error": "empty output"})
         except Exception as e:
-            attempts.append({"voice": cand_voice, "use_express": use_expr, "ok": False, "error": str(e)})
+            attempts.append({
+                "voice": cand_voice, 
+                "use_express": use_expr, 
+                "ok": False, 
+                "error": str(e)
+            })
             logger.warning(f"Attempt failed: {e}")
             try:
-                if os.path.exists(out_path): os.remove(out_path)
-            except: pass
+                if os.path.exists(out_path):
+                    os.remove(out_path)
+            except:
+                pass
             continue
 
     headers = {}

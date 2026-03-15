@@ -285,6 +285,7 @@ def speak():
                     os.remove(out_path)
             except:
                 pass
+                
             continue
 
     headers = {}
